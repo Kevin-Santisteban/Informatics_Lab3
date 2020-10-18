@@ -31,8 +31,11 @@ def parsingJsonFileToYaml():
             line = line.replace("}","")
             outputFile.write(line)
         else:
-           #Replacing chars, so the syntax matches yaml: 
-            if ":{" not  in line:         
+           
+            #validating if is not an object
+            if ":{" not in line and ": {" not in line :         
+
+               #Replacing chars, so the syntax matches yaml: 
                 line= line.replace("{","-").replace("}\n","").replace("}","").replace("[","").replace("]","").replace("},","").replace(",\n","\n")
                 
                 tempLine = line.split(": ")  
@@ -53,3 +56,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    print("End of execution")
