@@ -31,14 +31,19 @@ def parsingJsonFileToYaml():
             line = line.replace("}","")
             outputFile.write(line)
         else:
-           #Replacing chars, so the syntax matches yaml:
-            line= line.replace("{","-").replace("}\n","").replace("}","").replace("[","").replace("]","").replace("},","").replace(",\n","\n")
-            
-            tempLine = line.split(": ")  
-           #Validating that there's something meaningful after colon(:)
-            if len(tempLine)>1:          
-            #Removing quotes from left side :    
-                line = tempLine[0].replace("\"","") + " : "+ str(tempLine[1])       
+           #Replacing chars, so the syntax matches yaml: 
+            if ":{" not  in line:         
+                line= line.replace("{","-").replace("}\n","").replace("}","").replace("[","").replace("]","").replace("},","").replace(",\n","\n")
+                
+                tempLine = line.split(": ")  
+            #Validating that there's something meaningful after colon(:)
+                if len(tempLine)>1:          
+                #Removing quotes from left side :    
+                    line = tempLine[0].replace("\"","") + " : "+ str(tempLine[1])       
+            else:
+                tempLine2 = line.strip().split(":")
+                line = tempLine2[0].replace("\"","").replace("{","") + ":\n"
+
             if len(line.lstrip())!=0:
                outputFile.write(line)
 
