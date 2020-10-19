@@ -1,0 +1,38 @@
+lessons:
+- endTime: '11:30'
+  name: Дискретная математика (прак)
+  oddWeek: true
+  online: true
+  place: Кронверкский пр., д.49, лит.А
+  presencial: true
+  professor: Поляков Владимир Иванович
+  startTime: '10:00'
+  сlassroom: '403'
+- endTime: '13:10'
+  name: Дискретная математика(прак)
+  oddWeek: true
+  online: true
+  place: Кронверкский пр., д.49, лит.А
+  presencial: true
+  professor: Поляков Владимир Иванович
+  startTime: '11:40'
+  сlassroom: '403'
+- endTime: '11:30'
+  name: История(лекция)
+  oddWeek: false
+  online: true
+  place: Кронверкский пр., д.49, лит.А
+  presencial: true
+  professor: Жиркова Галина Петровна
+  startTime: '10:00'
+  сlassroom: Актовый зал
+- endTime: '13:10'
+  name: История(прак)
+  oddWeek: false
+  online: true
+  place: Кронверкский пр., д.49, лит.А
+  presencial: true
+  professor: Жиркова Галина Петровна
+  startTime: '11:40'
+  сlassroom: '461'
+name: Пятница

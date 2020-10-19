@@ -1,3 +1,4 @@
+import time
 
 def getFileContent(filePath):
 	newFile  = open(filePath, "r")
@@ -55,5 +56,7 @@ def main():
     return 
 
 if __name__ == "__main__":
+    start_time = time.time()
     main()
-    print("End of execution")
+    print("---No Libs %s seconds ---" % (time.time() - start_time))
+  
